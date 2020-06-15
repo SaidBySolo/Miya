@@ -20,7 +20,7 @@ exports.run = async (miya, message) => {
         return time
     }
     let time = process.uptime()
-    let uptime = (time + "").toHHMMSS
+    let uptime = (time + "").toHHMMSS()
     
     let pingembed = new MessageEmbed()
         .setTitle(p)
