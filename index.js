@@ -8,11 +8,6 @@ const miya = new Miya(config, db)
 process.on('uncaughtException', function (err) { console.log('uncaughtException 발생 : ' + err) })
 require('./utils/eventLoader')(miya);
 
-miya.on('ready', () => {
-    console.log(miya.user.username + " is Ready.\n")
-    miya.user.setPresence({ activity: { name: `미야야 도움을 입력 해보세요!` }, status: 'online' })
-})
-
 miya.on('message', async message => {
     if(message.author.bot) return
     if(!message.guild) return 
