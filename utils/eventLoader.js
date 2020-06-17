@@ -2,6 +2,7 @@ const reqEvent = (event) => require(`../events/${event}`);
 const Discord = require("discord.js");
 
 module.exports = miya => {
+    miya.on('ready', () => reqEvent('ready')(miya));
     miya.on('messageDelete', (message) => reqEvent('messageDelete')(message));
     miya.on('messageUpdate', (oldMessage, newMessage) => reqEvent('messageUpdate')(oldMessage, newMessage));
     miya.on('channelCreate', (channel) => reqEvent('channelCreate')(channel));
