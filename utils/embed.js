@@ -5,7 +5,7 @@ module.exports.notdev = (message) => {
     let embed = new Discord.MessageEmbed()
         embed.setColor("#5fe9ff")
         embed.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
-        embed.setDescription(i18n.__({ phrase: 'notdev', locale: "kr" }))
+        embed.setDescription("봇 관리자만 가능한 명령어에요!")
     message.channel.send({ embed: embed })
 }
 
@@ -13,7 +13,7 @@ module.exports.notown = (message) => {
     let embed = new Discord.MessageEmbed()
         embed.setColor("#5fe9ff")
         embed.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
-        embed.setDescription(i18n.__({ phrase: 'notown', locale: "kr" }))
+        embed.setDescription("봇 개발자만 가능한 명령어에요!")
     message.channel.send({ embed: embed })
 }
 
@@ -21,7 +21,7 @@ module.exports.notper = (message) => {
     let embed = new Discord.MessageEmbed()
         embed.setColor("#5fe9ff")
         embed.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
-        embed.setDescription(i18n.__({ phrase: 'notper', locale: "kr" }))
+        embed.setDescription("권한이 없어서 실행할 수 없어요!")
     message.channel.send({ embed: embed })
 }
 
@@ -29,7 +29,7 @@ module.exports.equalPerms = (message) => {
     let embed = new Discord.MessageEmbed()
         embed.setColor("#5fe9ff")
         embed.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
-        embed.setDescription(i18n.__({ phrase: 'Equal_Permission', locale: "kr" }))
+        embed.setDescription("봇의 권한이 부족해서 명령어를 실행할 수 없어요..")
     message.channel.send({ embed: embed })
 }
 
